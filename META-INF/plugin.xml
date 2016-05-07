@@ -1,0 +1,33 @@
+<idea-plugin version="2">
+    <name>Intellij quick hotfix</name>
+    <description>Quick copy, edited classes</description>
+    <version>1.0.0.0-SNAPSHOT</version>
+    <category>VCS Integration</category>
+    <vendor email="michalhajek@centrum.cz">Michal Hájek</vendor>
+    <idea-version since-build="10000"/>
+
+    <application-components>
+        <!-- Add your application components here -->
+    </application-components>
+
+    <project-components>
+        <!-- Add your project components here -->
+        <component>
+            <implementation-class>com.intellij.plugin.quickhotfix.QuickHotfixCommitExecutor</implementation-class>
+        </component>
+    </project-components>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="quickhotfix" class="com.intellij.plugin.quickhotfix.QuickHotfixAction" text="Quick hotfix"
+                description="Quick hotfix in current change list"
+                icon="/icon/system-package-icon.png">
+            <add-to-group group-id="ChangesViewPopupMenu" anchor="after" relative-to-action="ChangesView.Shelve"/>
+            <add-to-group group-id="ChangesViewToolbar" anchor="last"/>
+        </action>
+    </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+</idea-plugin>

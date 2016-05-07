@@ -1,2 +1,2 @@
-# Intellij-Quick-Hotfix
-Quick copy, edited classes
+# Quick-Hotfix
+Quick copy, edited classes for IntelliJ IDEA
